@@ -14,47 +14,47 @@ order_prompt = ("""
 ***********************************
 """)
 
-print(welcome)
+submenu = ['Appetizers','Entrees','Desserts','Drinks']
 
 menu = {
-  "Wings":0,
-  "Cookies":0,
-  "Spring Rolls":0,
 
-  "Salmon": 0,
-  "Steak" : 0,
-  "Meat Tornado" : 0,
-  "A Literal Garden" : 0,
+  "Wings",
+  "Cookies",
+  "Spring Rolls",
+  "Salmon",
+  "Steak",
+  "Meat Tornado",
+  "A Literal Garden",
+  "Ice Cream",
+  "Cake",
+  "Pie",
+  "Coffee",
+  "Tea",
+  "Unicorn Tears",
 
-  "Ice Cream" : 0,
-  "Cake" : 0,
-  "Pie" : 0,
-
-  "Coffee" : 0,
-  "Tea" : 0,
-  "Unicorn Tears" : 0,
 }
 
 def print_menu(lst):
 
-  for menu_item in menu.keys():
+  for menu_item in menu:
     print(menu_item)
 
 print_menu(menu)
+print(order_prompt)
 
-user_input = input('> ')
 selected_menu_items = []
 input_list = []
 
-def handle_input(x):
+def handle_input():
+
   while True:
-    input_list.append(x)
     x = input("> ")
-    
     if x == "Exit":
       print(input_list)
       break
+    input_list.append(x)
+    print(f'** 1 order of {x} has been added to your meal **')
 
-handle_input(user_input)
+handle_input()
 
   
