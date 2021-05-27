@@ -7,15 +7,6 @@ welcome = ("""
 ** To quit at any time, type "quit" **
 **************************************
 """)
-
-order_prompt = ("""
-***********************************
-** What would you like to order? **
-***********************************
-""")
-
-submenu = ['Appetizers','Entrees','Desserts','Drinks']
-
 menu = {
 
   "Wings",
@@ -33,27 +24,44 @@ menu = {
   "Unicorn Tears",
 
 }
+order_prompt = ("""
+***********************************
+** What would you like to order? **
+***********************************
+""")
+
+submenu = ['Appetizers','Entrees','Desserts','Drinks']
+
+
 
 def print_menu(lst):
 
   for menu_item in menu:
     print(menu_item)
+    if menu_item == 'Wings':
+      print("yes")
 
 print_menu(menu)
-print(order_prompt)
+
+
 
 selected_menu_items = []
-input_list = []
+customers_order = []
+
+
+def add_to_order(x):
+  print(f'** 1 order of {x} has been added to your meal **')
+
 
 def handle_input():
 
   while True:
     x = input("> ")
-    if x == "Exit":
-      print(input_list)
+    add_to_order(x)
+    if x == "quit":
+      print(customers_order, 'ok bye')
       break
-    input_list.append(x)
-    print(f'** 1 order of {x} has been added to your meal **')
+    customers_order.append(x)
 
 handle_input()
 
