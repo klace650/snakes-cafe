@@ -41,17 +41,17 @@ Unicorn Tears
 """)
 
 menu = {
-  "Wings": 0,
-  "Cookies": 0,
-  "Spring Rolls": 0,
-  "Salmon": 0,
-  "Meat Tornado": 0,
-  "A Literal Garden": 0,
-  "Ice Cream": 0,
-  "Cake": 0,
-  "Pie": 0,
+  "WINGS": 0,
+  "COOKIES": 0,
+  "SPRING ROLLS": 0,
+  "SALMON": 0,
+  "MEAT TORNADO": 0,
+  "A LITERAL GARDEN": 0,
+  "ICE CREAM": 0,
+  "CAKE": 0,
+  "PIE": 0,
   "TEA": 0,
-  "Unicorn Tears": 0,
+  "UNICORN TEARS": 0,
 }
 
 def handle_input(x):
@@ -64,8 +64,7 @@ while True:
 
   user_input = input("> ")
   if user_input == 'quit':
-    print('ok byeeee')
+    print('Thanks for your order - BYE', menu)
     break
   print(handle_input(user_input))
 
-  
